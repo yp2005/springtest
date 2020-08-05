@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/pay?useSSL=false&useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: root
+#    testWhileIdle: true
+#    validationQuery: select 1
+#
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5Dialect
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://123.57.3.79:30012/BASDB
+    username: bas
+    password: bas_*()123
+    testWhileIdle: true
+    validationQuery: select 1
+    driver-class-name: org.postgresql.Driver
+    name: basconnection
+    maxActive: 40
+    minIdle: 20
+    initialSize: 30
+    maxIdle: 40
+    testOnReturn: false
+    testOnBorrow: true
+    timeBetweenEvictionRunsMillis: 30000
+    maxPoolPreparedStatementPerConnectionSize: 10
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+
